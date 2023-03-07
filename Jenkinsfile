@@ -20,7 +20,7 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+                   withCredentials([string(credentialsId: 'Dockercredit', variable: 'Dockercredit')]) {
                    sh 'docker login -u javatechie -p ${dockerhubpwd}'
 
 }
